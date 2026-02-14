@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Dhanoo ❤️</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #ff758c, #ff7eb3);
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        color: white;
+        overflow: hidden;
+    }
+
+    h1 {
+        margin-top: 80px;
+        font-size: 50px;
+        animation: glow 2s infinite alternate;
+    }
+
+    p {
+        font-size: 22px;
+        margin: 20px;
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 20px;
+        border: none;
+        border-radius: 30px;
+        background: white;
+        color: #ff4d6d;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #ff4d6d;
+        color: white;
+        transform: scale(1.1);
+    }
+
+    .heart {
+        position: absolute;
+        color: white;
+        font-size: 20px;
+        animation: float 5s linear infinite;
+    }
+
+    @keyframes glow {
+        from { text-shadow: 0 0 10px white; }
+        to { text-shadow: 0 0 30px #fff; }
+    }
+
+    @keyframes float {
+        0% { transform: translateY(100vh); opacity: 1; }
+        100% { transform: translateY(-10vh); opacity: 0; }
+    }
+</style>
+</head>
+<body>
+
+<h1>Happy Valentine's Day Dhanoo ❤️</h1>
+<p>You are the most beautiful part of my life 💕</p>
+<p>Every moment with you feels like magic ✨</p>
+
+<button onclick="showLove()">Click For A Surprise 💌</button>
+
+<script>
+function showLove() {
+    alert("Dhanoo ❤️\n\nYou are my today, my tomorrow, and my forever.\n\nI love you endlessly 💖 - Yadnesh");
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 30 + 15 + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}
+
+setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
